@@ -7,17 +7,21 @@
           <h2 class="headline">
             How to get the most out of your vacation in Hawai'i.
           </h2>
-          <v-btn
+          <!-- <v-btn
             rounded
             class="mt-2"
             color="secondary lighten-1"
             @click="$router.push('/oahu')"
             >Search Oahu</v-btn
-          >
+          > -->
+          <v-divider class="my-2" color="white"></v-divider>
+          <h3 class="title">
+            <em> Coming soon... </em>
+          </h3>
         </v-container>
       </div>
     </div>
-    <v-container
+    <!-- <v-container
       id="islandInfo"
       class="d-flex justify-center align-center"
     ></v-container>
@@ -73,7 +77,7 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
   </div>
 </template>
 

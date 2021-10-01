@@ -5,8 +5,8 @@
         <nuxt />
       </div>
     </v-main>
-    <SiteFooter />
-    <TermsConsent />
+    <!-- <SiteFooter /> -->
+    <!-- <TermsConsent /> -->
   </v-app>
 </template>
 
