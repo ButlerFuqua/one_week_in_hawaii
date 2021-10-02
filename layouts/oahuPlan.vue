@@ -28,6 +28,7 @@
 
         <v-icon>mdi-download-outline</v-icon>
       </v-btn>
+      <ShareButton />
     </v-bottom-navigation>
     <TermsConsent />
   </v-app>
@@ -37,9 +38,11 @@
 import MenuIcon from "../components/icons/MenuIcon.vue";
 import ReloadIcon from "../components/icons/ReloadIcon";
 import TermsConsent from "../components/TermsConsent";
+import ShareButton from "../components/ShareButton";
 export default {
   components: {
     TermsConsent,
+    ShareButton,
     ReloadIcon,
     MenuIcon,
   },

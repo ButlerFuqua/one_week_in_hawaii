@@ -27,6 +27,7 @@
 
         <v-icon>mdi-format-list-text</v-icon>
       </v-btn>
+      <ShareButton />
     </v-bottom-navigation>
     <TermsConsent />
   </v-app>
@@ -37,10 +38,12 @@ import MenuIcon from "../components/icons/MenuIcon.vue";
 import ReloadIcon from "../components/icons/ReloadIcon";
 import ContentHandlers from "../mixins/ContentHandlers";
 import TermsConsent from "../components/TermsConsent";
+import ShareButton from "../components/ShareButton";
 export default {
   components: {
     ReloadIcon,
     TermsConsent,
+    ShareButton,
     MenuIcon,
   },
   mixins: [ContentHandlers],
