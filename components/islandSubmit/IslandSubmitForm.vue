@@ -78,10 +78,10 @@ export default {
       //Submit form
       try {
         await this.submitToDb();
-        this.feedbackMessage =
-          "Your email has been submitted! You will receive an email if and when a Word is received for you. Thank you and God bless.";
+        this.feedbackMessage = `Your email has been submitted! You will receive an email when content for ${this.island} has been published.`;
         this.feedbackType = "success";
       } catch (error) {
+        console.error(error);
         this.feedbackMessage =
           "Sorry, there was an error submitting your email. Please try again at another time.";
         this.feedbackType = "error";
@@ -102,10 +102,10 @@ export default {
             email: this.email,
             island: this.island,
           },
-          function (err, record) {
-            if (err) {
-              console.error(err);
-              reject(err);
+          function (error, record) {
+            if (error) {
+              console.error(error);
+              reject(error);
             }
             resolve("Successful submission");
           }
