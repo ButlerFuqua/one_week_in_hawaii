@@ -5,6 +5,8 @@
     <v-img class="mb-2" :src="getFeaturedImage(item)"></v-img>
     <v-container>
       <TLDR :post="item" />
+      <Amenities :post="item" class="mb-3" />
+      <TOC :post="item" />
       <nuxt-content :document="item" />
     </v-container>
   </div>
@@ -18,6 +20,8 @@ import ContentHandlers from "../../../mixins/ContentHandlers";
 import AssetHandlers from "../../../mixins/AssetHandlers";
 import SkeletonContent from "../../../components/progress/SkeletonContent";
 import TLDR from "../../../components/content/TLDR";
+import TOC from "../../../components/content/TOC";
+import Amenities from "../../../components/content/Amenities";
 export default {
   layout: "oahuView",
   props: ["pathToContent"],
@@ -26,8 +30,8 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent, TLDR },
-  mixins: [ContentHandlers, AssetHandlers],
+  components: { SkeletonContent, TLDR, TOC },
+  mixins: [ContentHandlers, AssetHandlers, Amenities],
   methods: {
     async init() {
       this.item = await this.returnContentFromParams();

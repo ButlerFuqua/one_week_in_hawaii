@@ -21,23 +21,8 @@ import SkeletonContent from "../../components/progress/SkeletonContent";
 import TLDR from "../../components/content/TLDR";
 import TOC from "../../components/content/TOC";
 export default {
-  layout: "blogPost",
-  props: [],
-  data() {
-    return {
-      item: null,
-    };
-  },
+  props: ["item"],
   components: { SkeletonContent, TLDR, TOC },
   mixins: [ContentHandlers, AssetHandlers],
-  methods: {
-    async init() {
-      this.item = await this.returnContentFromParams();
-    },
-  },
-  async created() {
-    await this.init();
-    this.$nuxt.$emit("pageTitleChange", this.item.title);
-  },
 };
 </script>

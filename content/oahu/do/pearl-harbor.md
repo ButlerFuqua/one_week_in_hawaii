@@ -2,6 +2,7 @@
 title: Pear Harbor
 description: An infamous memorial from WWII.
 categories: ["land"]
+amenities: ["bathroom", "parking"]
 ---
 
 # Pear Harbor

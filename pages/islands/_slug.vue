@@ -5,6 +5,7 @@
     <v-img class="mb-2" :src="getFeaturedImage(item)"></v-img>
     <v-container>
       <TLDR :post="item" />
+      <TOC :post="item" />
       <nuxt-content :document="item" />
     </v-container>
   </div>
@@ -18,6 +19,7 @@ import ContentHandlers from "../../mixins/ContentHandlers";
 import AssetHandlers from "../../mixins/AssetHandlers";
 import SkeletonContent from "../../components/progress/SkeletonContent";
 import TLDR from "../../components/content/TLDR";
+import TOC from "../../components/content/TOC";
 export default {
   layout: "islandView",
   props: ["pathToContent"],
@@ -26,7 +28,7 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent, TLDR },
+  components: { SkeletonContent, TLDR, TOC },
   mixins: [ContentHandlers, AssetHandlers],
   methods: {
     async init() {
