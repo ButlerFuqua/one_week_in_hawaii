@@ -7,41 +7,34 @@
       <h2 class="headline">Oahu</h2>
       <v-divider class="my-2"></v-divider>
 
-      <v-card
-        v-for="post in todos"
-        :key="post.title"
-        class="mb-2 todo-card"
-        outlined
-      >
-        <v-img :src="getFeaturedImage(post)"></v-img>
-
-        <div class="pa-3">
-          <h3 class="title">{{ post.title }}</h3>
-          <p>{{ post.description }}</p>
-          <v-chip
-            v-for="category in post.categories"
-            :key="category"
-            small
-            outlined
-            class="mr-1"
-            >{{ category }}</v-chip
-          >
-        </div>
-        <v-card-actions class="justify-space-between">
-          <v-btn rounded text color="primary" @click="navigateToPage(post)"
-            >View</v-btn
-          >
-          <v-btn
-            small
-            rounded
-            text
-            color="secondary"
-            @click="removeHandler(post)"
-          >
-            Remove
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+      <v-list>
+        <template v-for="(post, idx) in todos">
+          <v-list-item two-line :key="post.title">
+            <v-list-item-content>
+              <v-list-item-title>{{ post.title }}</v-list-item-title>
+              <v-list-item-subtitle>
+                {{ post.description }}
+              </v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-action>
+              <v-btn small text rounded color="red" @click="removeHandler(post)"
+                >Remove</v-btn
+              >
+            </v-list-item-action>
+            <v-list-item-action>
+              <v-btn
+                small
+                text
+                rounded
+                color="blue"
+                @click="navigateToPage(post)"
+                >View</v-btn
+              >
+            </v-list-item-action>
+          </v-list-item>
+          <v-divider :key="idx"></v-divider>
+        </template>
+      </v-list>
     </div>
   </v-container>
 </template>

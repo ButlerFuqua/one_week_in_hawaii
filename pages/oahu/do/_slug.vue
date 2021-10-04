@@ -6,7 +6,7 @@
     <v-container>
       <TLDR :post="item" />
       <Amenities :post="item" class="mb-3" />
-      <TOC :post="item" />
+      <TOC :post="item" class="mb-3" />
       <nuxt-content :document="item" />
     </v-container>
   </div>

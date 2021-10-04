@@ -1,0 +1,25 @@
+.nuxt-content h2, .nuxt-content h3, .nuxt-content h4, .nuxt-content h5{
+    color: coral;
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+}
+
+.nuxt-content ul, .nuxt-content ol{
+    margin-bottom: 1rem;
+}
+
+.nuxt-content a:link {    /* unvisited link */
+    color: #00BFA5;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+.nuxt-content a:visited {    /* visited link */
+    color: #AA00FF;
+}
+.nuxt-content a:hover {    /* mouse over link */
+    color: #0277BD;
+    border-bottom: none;
+}
+.nuxt-content a:active {    /* active link */
+    color: #FF5722;
+}

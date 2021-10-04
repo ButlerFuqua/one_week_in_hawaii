@@ -39,6 +39,11 @@
         <v-icon>mdi-minus</v-icon>
       </v-btn>
       <ShareButton />
+      <v-btn @click="$router.push('/list')" value="list">
+        <span>List ({{ todos.length }})</span>
+
+        <v-icon>mdi-format-list-text</v-icon>
+      </v-btn>
     </v-bottom-navigation>
     <TermsConsent />
   </v-app>
@@ -71,6 +76,9 @@ export default {
     postInList() {
       const posts = this.$store.state.todos.list;
       return posts.find((post) => post.slug === this.post.slug);
+    },
+    todos() {
+      return this.$store.state.todos.list;
     },
   },
   methods: {

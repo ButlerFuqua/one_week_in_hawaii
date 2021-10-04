@@ -35,59 +35,67 @@
         <v-skeleton-loader type="article, actions"></v-skeleton-loader>
       </v-card>
     </div>
-    <div v-else-if="todos">
-      <v-card
+    <v-row v-else-if="todos">
+      <v-col
         v-for="post in filteredPosts"
         :key="post.title"
-        class="mb-2"
-        outlined
+        cols="12"
+        sm="6"
+        lg="4"
       >
-        <v-img
-          min-height="200"
-          max-height="250"
-          :src="getFeaturedImage(post)"
-        ></v-img>
-        <div class="pa-3">
-          <h3 class="title">{{ post.title }}</h3>
-          <v-divider class="mt-1 mb-3"></v-divider>
-          <p>{{ post.description }}</p>
-          <v-chip
-            v-for="category in post.categories"
-            :key="category"
-            small
-            outlined
-            class="mr-1"
-            :color="
-              selectedCategories
-                .map((str) => str.toLowerCase())
-                .includes(category)
-                ? 'secondary'
-                : 'default'
-            "
-            >{{ category }}</v-chip
-          >
-        </div>
-        <v-card-actions class="justify-space-between">
-          <v-btn
-            rounded
-            text
-            color="primary"
-            @click="$router.push(`/blog/${post.slug}`)"
-            >Read Article</v-btn
-          >
-        </v-card-actions>
-      </v-card>
-    </div>
+        <v-card class="mb-2 h-100" outlined>
+          <v-img
+            min-height="200"
+            max-height="250"
+            :src="getFeaturedImage(post)"
+          ></v-img>
+          <div class="pa-3">
+            <h3 class="title">{{ post.title }}</h3>
+            <small
+              ><em>Last updated</em>:
+              {{ returnFriendlyUpdatedDate(post) }}</small
+            >
+            <v-divider class="mt-1 mb-3"></v-divider>
+            <p>{{ post.description }}</p>
+            <v-chip
+              v-for="category in post.categories"
+              :key="category"
+              small
+              outlined
+              class="mr-1"
+              :color="
+                selectedCategories
+                  .map((str) => str.toLowerCase())
+                  .includes(category)
+                  ? 'secondary'
+                  : 'default'
+              "
+              >{{ category }}</v-chip
+            >
+          </div>
+          <v-card-actions class="justify-space-between">
+            <v-btn
+              rounded
+              text
+              color="primary"
+              @click="$router.push(`/blog/${post.slug}`)"
+              >Read Article</v-btn
+            >
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
 import ContentHandlers from "../../mixins/ContentHandlers";
 import AssetHandlers from "../../mixins/AssetHandlers";
+import DateHandlers from "../../mixins/DateHandlers";
 export default {
   layout: "blog",
   components: {},
-  mixins: [ContentHandlers, AssetHandlers],
+  mixins: [ContentHandlers, AssetHandlers, DateHandlers],
   data() {
     return {
       pageTitle: "Articles",

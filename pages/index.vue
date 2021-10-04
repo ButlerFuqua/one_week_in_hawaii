@@ -48,10 +48,10 @@
           v-for="island in islands"
           :key="island.title"
           cols="12"
-          md="6"
+          sm="6"
           lg="4"
         >
-          <v-card outlined class="mb-3">
+          <v-card outlined class="mb-3 h-100">
             <v-img :src="getFeaturedImage(island)"></v-img>
             <div class="pa-2">
               <h4 class="title">{{ island.title }}</h4>

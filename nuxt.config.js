@@ -23,6 +23,7 @@ export default {
   head: generateHeadTags('One Week in Hawaii', 'welcome', null, false),
   css: [
     '~/assets/css/global.css',
+    '~/assets/css/nuxt-content.css',
   ],
   plugins: [
     // '~/plugins/components' // global components to make available in content md
