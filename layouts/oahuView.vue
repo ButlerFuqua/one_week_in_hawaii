@@ -17,10 +17,10 @@
       </v-container>
     </v-main>
     <v-bottom-navigation fixed app flat>
-      <v-btn @click="$router.push('/oahu')" value="recent">
-        <span>Back</span>
+      <v-btn @click="$router.push('/oahu')" value="oahu">
+        <span>Oahu</span>
 
-        <v-icon>mdi-arrow-left</v-icon>
+        <v-icon>mdi-island</v-icon>
       </v-btn>
 
       <v-btn
