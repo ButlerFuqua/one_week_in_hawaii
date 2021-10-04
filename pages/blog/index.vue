@@ -42,9 +42,14 @@
         class="mb-2"
         outlined
       >
+        <v-img
+          min-height="200"
+          max-height="250"
+          :src="getFeaturedImage(post)"
+        ></v-img>
         <div class="pa-3">
           <h3 class="title">{{ post.title }}</h3>
-          <v-divider class="mb-2"></v-divider>
+          <v-divider class="mt-1 mb-3"></v-divider>
           <p>{{ post.description }}</p>
           <v-chip
             v-for="category in post.categories"
@@ -78,10 +83,11 @@
 
 <script>
 import ContentHandlers from "../../mixins/ContentHandlers";
+import AssetHandlers from "../../mixins/AssetHandlers";
 export default {
   layout: "blog",
   components: {},
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   data() {
     return {
       pageTitle: "Articles",

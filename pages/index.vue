@@ -52,6 +52,7 @@
           lg="4"
         >
           <v-card outlined class="mb-3">
+            <v-img :src="getFeaturedImage(island)"></v-img>
             <div class="pa-2">
               <h4 class="title">{{ island.title }}</h4>
               <p>{{ island.description }}</p>
@@ -83,6 +84,7 @@ import StandardCard from "../components/StandardCard";
 import PrimaryBtn from "../components/PrimaryBtn";
 import WaterWaves from "../components/WaterWaves";
 import ContentHandlers from "../mixins/ContentHandlers";
+import AssetHandlers from "../mixins/AssetHandlers";
 export default {
   head: generateHeadTags(
     "One Week in Hawaii",
@@ -93,7 +95,7 @@ export default {
   ),
   layout: "landing",
   components: { StandardCard, PrimaryBtn, WaterWaves },
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   components: { StandardCard, PrimaryBtn },
   data() {
     return {

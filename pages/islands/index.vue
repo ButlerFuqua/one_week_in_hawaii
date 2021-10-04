@@ -48,6 +48,7 @@
         class="mb-2"
         outlined
       >
+        <v-img :src="getFeaturedImage(post)"></v-img>
         <div class="pa-3">
           <h3 class="title">{{ post.title }}</h3>
           <p>{{ post.description }}</p>
@@ -75,10 +76,11 @@
 
 <script>
 import ContentHandlers from "../../mixins/ContentHandlers";
+import AssetHandlers from "../../mixins/AssetHandlers";
 export default {
   layout: "blog",
   components: {},
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   data() {
     return {
       pageTitle: "Islands",

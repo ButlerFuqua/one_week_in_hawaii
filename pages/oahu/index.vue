@@ -39,9 +39,10 @@
       <v-card
         v-for="post in filteredPosts"
         :key="post.title"
-        class="mb-2"
+        class="mb-4"
         outlined
       >
+        <v-img height="200" :src="getFeaturedImage(post)"></v-img>
         <div class="pa-3">
           <h3 class="title">{{ post.title }}</h3>
           <p>{{ post.description }}</p>
@@ -93,10 +94,11 @@
 
 <script>
 import ContentHandlers from "../../mixins/ContentHandlers";
+import AssetHandlers from "../../mixins/AssetHandlers";
 export default {
   layout: "oahu",
   components: {},
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   data() {
     return {
       pageTitle: "Oahu",

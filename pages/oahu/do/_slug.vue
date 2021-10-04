@@ -1,7 +1,10 @@
 <template>
-  <v-container v-if="item">
-    <nuxt-content :document="item" />
-  </v-container>
+  <div v-if="item">
+    <v-img class="mb-2" :src="getFeaturedImage(item)"></v-img>
+    <v-container>
+      <nuxt-content :document="item" />
+    </v-container>
+  </div>
   <v-container v-else>
     <SkeletonContent />
   </v-container>
@@ -9,6 +12,7 @@
 
 <script>
 import ContentHandlers from "../../../mixins/ContentHandlers";
+import AssetHandlers from "../../../mixins/AssetHandlers";
 import SkeletonContent from "../../../components/progress/SkeletonContent";
 export default {
   layout: "oahuView",
@@ -19,7 +23,7 @@ export default {
     };
   },
   components: { SkeletonContent },
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   methods: {
     async init() {
       this.item = await this.returnContentFromParams();
