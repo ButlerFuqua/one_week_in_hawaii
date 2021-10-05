@@ -14,6 +14,7 @@
       <TLDR :post="item" />
       <TOC :post="item" />
       <nuxt-content :document="item" />
+      <BuyMeCoffee />
     </v-container>
   </div>
   <v-container v-else>
@@ -28,6 +29,7 @@ import DateHandlers from "../../mixins/DateHandlers";
 import SkeletonContent from "../../components/progress/SkeletonContent";
 import TLDR from "../../components/content/TLDR";
 import TOC from "../../components/content/TOC";
+import BuyMeCoffee from "../../components/BuyMeCoffee";
 export default {
   layout: "blogPost",
   props: [],
@@ -36,7 +38,7 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent, TLDR, TOC },
+  components: { SkeletonContent, TLDR, TOC, BuyMeCoffee },
   mixins: [ContentHandlers, AssetHandlers, DateHandlers],
   methods: {
     async init() {

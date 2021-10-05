@@ -11,6 +11,7 @@
       <Amenities :post="item" class="mb-3" />
       <TOC :post="item" class="mb-3" />
       <nuxt-content :document="item" />
+      <BuyMeCoffee />
     </v-container>
   </div>
   <v-container v-else>
@@ -25,6 +26,7 @@ import SkeletonContent from "../../../components/progress/SkeletonContent";
 import TLDR from "../../../components/content/TLDR";
 import TOC from "../../../components/content/TOC";
 import Amenities from "../../../components/content/Amenities";
+import BuyMeCoffee from "../../../components/BuyMeCoffee";
 export default {
   layout: "oahuView",
   props: ["pathToContent"],
@@ -33,7 +35,7 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent, TLDR, TOC },
+  components: { SkeletonContent, TLDR, TOC, BuyMeCoffee },
   mixins: [ContentHandlers, AssetHandlers, Amenities],
   methods: {
     async init() {

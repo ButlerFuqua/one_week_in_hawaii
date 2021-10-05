@@ -7,6 +7,7 @@
       <TLDR :post="item" />
       <TOC :post="item" />
       <nuxt-content :document="item" />
+      <BuyMeCoffee />
     </v-container>
   </div>
   <v-container v-else>
@@ -20,6 +21,7 @@ import AssetHandlers from "../../mixins/AssetHandlers";
 import SkeletonContent from "../../components/progress/SkeletonContent";
 import TLDR from "../../components/content/TLDR";
 import TOC from "../../components/content/TOC";
+import BuyMeCoffee from "../../components/BuyMeCoffee";
 export default {
   layout: "islandView",
   props: ["pathToContent"],
@@ -28,7 +30,7 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent, TLDR, TOC },
+  components: { SkeletonContent, TLDR, TOC, BuyMeCoffee },
   mixins: [ContentHandlers, AssetHandlers],
   methods: {
     async init() {

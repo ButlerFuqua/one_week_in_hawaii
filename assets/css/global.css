@@ -11,6 +11,10 @@ html, body{
     height: 100%;
 }
 
+.w-100{
+    width: 100%;
+}
+
 ::-moz-selection { 
     background: rgb(4, 184, 184);
     color: #fff;

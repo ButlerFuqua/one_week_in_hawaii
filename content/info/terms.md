@@ -1,7 +1,7 @@
 ---
 title: Terms
 description: You agree to these terms while using this website.
-post_number: 1
+post_number: 40
 ---
 
 # Terms

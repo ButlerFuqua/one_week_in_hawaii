@@ -34,7 +34,7 @@
             >
           </p>
           <p class="mt-4">
-            Your support helps keep this site up and free for all to use.
+            Your support helps keep this site free for all to use.
           </p>
           <v-btn rounded text small color="primary" @click="showSupport = false"
             >No thanks</v-btn
@@ -171,9 +171,6 @@ export default {
 <style scoped>
 #navDrawer {
   max-height: 100% !important;
-}
-#linkToCheckout {
-  /* text-decoration: none; */
 }
 </style>
 

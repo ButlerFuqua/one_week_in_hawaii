@@ -1,6 +1,7 @@
 <template>
   <v-container v-if="item">
     <nuxt-content :document="item" />
+    <BuyMeCoffee />
   </v-container>
   <v-container v-else>
     <SkeletonContent />
@@ -10,6 +11,7 @@
 <script>
 import ContentHandlers from "../../mixins/ContentHandlers";
 import SkeletonContent from "../../components/progress/SkeletonContent";
+import BuyMeCoffee from "../../components/BuyMeCoffee";
 export default {
   props: ["pathToContent"],
   data() {
@@ -17,7 +19,7 @@ export default {
       item: null,
     };
   },
-  components: { SkeletonContent },
+  components: { SkeletonContent, BuyMeCoffee },
   mixins: [ContentHandlers],
   methods: {
     async init() {
