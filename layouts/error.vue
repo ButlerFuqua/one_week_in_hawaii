@@ -14,7 +14,14 @@
     </v-alert>
     <v-divider class="my-4"></v-divider>
     <div class="text-center my-4">
-      <h2>Recent Posts</h2>
+      <h2>Search Oahu</h2>
+      <v-btn
+        rounded
+        color="secondary"
+        elevation="0"
+        @click="$router.push('/oahu')"
+        >Search Oahu</v-btn
+      >
     </div>
     <v-divider class="my-4"></v-divider>
     <TermsConsent />
