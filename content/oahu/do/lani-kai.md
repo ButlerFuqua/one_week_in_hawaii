@@ -2,6 +2,8 @@
 title: Lani Kai
 description: A chill beach in Kailua.
 categories: ["beaches", "water"]
+posted_date: 2021-10-04
+updated_date: 2021-10-04
 ---
 
 ## Lorem ipsum dolor sit amet, 

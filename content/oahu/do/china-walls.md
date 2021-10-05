@@ -2,7 +2,8 @@
 title: China Walls
 description: Place to enjoy the water.
 categories: ["water"]
-link: true
+posted_date: 2021-10-04
+updated_date: 2021-10-04
 ---
 
 # China Walls

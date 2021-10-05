@@ -2,7 +2,7 @@
 title: Kailua Beach Park
 description: Great beach park that usually has shallow pools in the sand for kids, plenty of grass, and picnic tables.
 categories: ["land", "lookouts"]
- 
+amenities: ["bathroom", "parking"]
 ---
 
 ## What is it?

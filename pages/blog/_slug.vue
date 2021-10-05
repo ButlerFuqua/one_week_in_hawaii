@@ -2,7 +2,7 @@
   <div v-if="item">
     <h1 class="text-center">{{ item.title }}</h1>
     <div class="text-center">
-      <small><em>Created</em>: {{ returnFriendlyCreatedDate(item) }}</small
+      <small><em>Posted</em>: {{ returnFriendlyPostedDate(item) }}</small
       >,
       <small
         ><em>Last updated</em>: {{ returnFriendlyUpdatedDate(item) }}</small

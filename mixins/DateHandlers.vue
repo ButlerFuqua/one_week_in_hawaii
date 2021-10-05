@@ -33,7 +33,16 @@ export default {
   },
   methods: {
     returnFriendlyUpdatedDate(post) {
-      const date = new Date(post.updatedAt);
+      const date = new Date(post.updated_date);
+
+      const month = this.monthsShort[date.getMonth() - 1];
+      const year = date.getFullYear();
+      const day = date.getDate();
+
+      return `${month} ${day}, ${year}`;
+    },
+    returnFriendlyPostedDate(post) {
+      const date = new Date(post.posted_date);
 
       const month = this.monthsShort[date.getMonth() - 1];
       const year = date.getFullYear();
