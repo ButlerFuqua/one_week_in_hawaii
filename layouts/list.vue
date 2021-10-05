@@ -14,9 +14,32 @@
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
-    <v-main class="grey lighten-5">
+    <v-main v-if="!showSupport" class="grey lighten-5">
       <v-container style="margin: auto">
         <nuxt />
+      </v-container>
+    </v-main>
+    <v-main v-else class="grey lighten-5">
+      <v-container class="d-flex justify-center align-center h-100 text-center">
+        <div>
+          <h1 class="title mb-5">You're download has started.</h1>
+          <h2 class="headline mb-5">Hope you enjoy your vacation!</h2>
+          <h2 class="title mb-3">Buy me a coffee?</h2>
+          <p class="display-1">
+            <a
+              id="linkToCheckout"
+              href="https://buy.stripe.com/test_5kAeXXgfF48Df4c7ss"
+              target="_blank"
+              >$2.50 - Of course!</a
+            >
+          </p>
+          <p class="mt-4">
+            Your support helps keep this site up and free for all to use.
+          </p>
+          <v-btn rounded text small color="primary" @click="showSupport = false"
+            >No thanks</v-btn
+          >
+        </div>
       </v-container>
     </v-main>
     <v-bottom-navigation fixed app flat>
@@ -63,6 +86,7 @@ export default {
   },
   data() {
     return {
+      showSupport: false,
       drawer: false,
       title: "Your vacation List",
       value: "download",
@@ -136,6 +160,9 @@ export default {
 
       // Remove loading state if applicable
       if (setLoader) setLoader(false);
+
+      // Show support page
+      this.showSupport = true;
     },
   },
 };
@@ -144,6 +171,9 @@ export default {
 <style scoped>
 #navDrawer {
   max-height: 100% !important;
+}
+#linkToCheckout {
+  /* text-decoration: none; */
 }
 </style>
 
