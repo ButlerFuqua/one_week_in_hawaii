@@ -47,7 +47,7 @@
           <v-img height="200" :src="getFeaturedImage(post)"></v-img>
           <div class="pa-3">
             <h3 class="title">{{ post.title }}</h3>
-            <p>{{ post.description }}</p>
+            <p class="caption">{{ post.description }}</p>
             <v-chip
               v-for="category in post.categories"
               :key="category"

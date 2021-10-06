@@ -27,7 +27,7 @@ export default {
   props: ["post"],
   data() {
     return {
-      amenities: ["bathroom", "beach shower", "free parking"],
+      amenities: ["bathroom", "beach shower", "free parking", "street parking"],
     };
   },
 };

@@ -1,90 +1,63 @@
 ---
 title: Lani Kai
-description: A chill beach in Kailua.
+description: A very beautiful and relaxing beach. Sometimes very windy with choppy water, but otherwise good for snorkeling. Little to no waves.
 categories: ["beaches", "water"]
-posted_date: 2021-10-04
-updated_date: 2021-10-04
+amenities: ["street parking",]
+google_maps: https://goo.gl/maps/ffjYs3WDzLyqPsns7
+posted_date: 2021-10-05
+updated_date: 2021-10-05
 ---
 
-## Lorem ipsum dolor sit amet, 
+## Where?
 
-![alt text](/no_image_yet.png)
+Lani Kai is located in Kailua, right past [Kailua Beach park](kailua-beach-park). ( *Click above link to view in Google Maps* ).
 
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At erat pellentesque adipiscing commodo elit at imperdiet dui. Neque laoreet suspendisse interdum 
+## What's it like?
 
-[Check out the Dole Plantation](dole-plantation)
+### Views
 
-[Check out the Dole Plantation](china-walls)
+In my opinion, this is one of the most beautiful beaches on Oahu. The sand is soft and bright, and the views are incredible. 
 
-[Check out the Dole Plantation](pillbox)
+Behind the beach is a quiet, residential neighborhood with just enough mountains for some great scenery.
 
-[Check out the Dole Plantation](pillboxss)
+![alt text](/posts/lani_kai_beach_mountain.webp)
 
-consectetur libero id faucibus. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Sit amet luctus venenatis lectus magna fringilla urna. Massa eget egestas purus viverra accumsan in. 
+In the water are twin mountains called "The Mokes."
 
-Donec massa sapien faucibus et molestie ac feugiat sed. Amet commodo nulla facilisi nullam vehicula. Dui ut ornare lectus sit amet. Adipiscing enim eu turpis egestas pretium aenean. Eget sit amet tellus cras adipiscing enim eu. Sit amet commodo nulla facilisi nullam vehicula.
+![alt text](/posts/lani_kai_mokes.webp)
 
-### Here is another
+### Sand
 
- Ut diam quam nulla porttitor massa id. Lobortis feugiat vivamus at augue eget. Consectetur a erat nam at lectus urna. Senectus et netus et malesuada fames ac turpis.
+The sand is among the softest that I've seen on the island.
 
-![alt text](/no_image_yet.png)
+![alt text](/posts/lani_kai_sand.webp)
 
-Eget gravida cum sociis natoque penatibus et magnis. 
+## What to do in Lani Kai
 
-1) Here is the first one
-2) Here is the second one
-3) Here is the third one
-4) fourth
+### Chill
 
-Libero id faucibus nisl tincidunt eget. **Donec** enim diam vulputate ut pharetra sit. Tortor consequat id porta nibh venenatis cras. Aliquam etiam erat velit scelerisque in. Congue nisi vitae suscipit tellus mauris a diam maecenas. Senectus et netus et malesuada fames ac turpis. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. 
+My wife and I like to go here when we feel like just chilling on the beach and going for a good swim. 
 
-## Lorem is the way to go
+### Snorkel
 
-Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Dolor sed viverra ipsum nunc aliquet bibendum enim. Tincidunt arcu non sodales neque. Convallis tellus id interdum velit laoreet id. 
+Sometimes it's great for snorkeling, but the water is often choppy which makes the underwater visibility not so great.
 
-![alt text](/no_image_yet.png)
+There is a decent amount of coral in the water. This makes it great for snorkeling.
 
-Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Eros donec ac odio tempor. Morbi quis commodo odio aenean sed adipiscing. 
+### Kite surfing (no so often)
 
-Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Vel pharetra vel turpis nunc. Metus aliquam eleifend mi in nulla posuere.
+I sometimes see locals kite surfing here, but there's way more of that at [Kailua Beach park](kailua-beach-park).
 
-### One
+## Parking
 
-![alt text](/no_image_yet.png)
+Parking isn't *too* bad here. The only parking is in the residential neighborhood directly behind the beach. 
 
-Ac auctor augue mauris augue neque gravida in. Risus commodo viverra maecenas accumsan. Ullamcorper morbi tincidunt ornare massa. Cras pulvinar mattis nunc sed blandit libero volutpat. Molestie at elementum eu facilisis sed odio. 
+My wife and I usually find a spot relatively easily, but there have been some limitations recently.
 
-## Two words
+![alt text](/posts/lani_kai_no_parking_sign.webp)
 
-### Subheading right uner
+**At the time of writing this** parking has been restricted to locals residents M-F during certain hours. But, as you can see in the photo, this is only through December 11, 2021. However, this may continue longer due to Emergency vehicles not being able to get through the crowded streets.
 
-Pharetra magna ac placerat vestibulum. Dui faucibus in ornare quam viverra orci. Amet cursus sit amet dictum. At elementum eu facilisis sed odio. Fermentum iaculis eu non diam phasellus. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Sit amet purus gravida quis blandit turpis cursus. Molestie at elementum eu facilisis sed odio morbi quis.
+My advice, just be ready to park at Kailua beach Park and walk to Lani Kai if you can make the walk.
 
-Let's look at some things:
 
-* here is a point
-* Here is another
-* This is a list
-
-Neque vitae tempus quam pellentesque nec nam. At erat pellentesque adipiscing
-
-## Heading
-
-commodo elit. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Dictum sit amet justo donec enim diam vulputate ut pharetra. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Blandit turpis cursus in hac habitasse platea dictumst quisque. Blandit aliquam etiam erat velit scelerisque in dictum non. A erat nam at lectus urna duis convallis convallis. 
-
-Gravida quis blandit turpis cursus. Id leo in vitae turpis massa. Aliquet nibh praesent tristique magna. Donec ac odio tempor orci dapibus ultrices in iaculis. Tortor condimentum lacinia quis vel eros donec ac odio. Facilisis mauris sit amet massa. Rhoncus aenean vel elit scelerisque. Sit amet justo donec enim diam vulputate ut. Erat velit scelerisque in dictum non consectetur a erat. 
-
-Et magnis dis parturient montes nascetur ridiculus mus.
-
-### Subheading going right here, ya'll
-
-Sed turpis tincidunt id aliquet risus feugiat. Natoque penatibus et magnis dis parturient montes nascetur ridiculus. 
-
-Semper viverra nam libero justo laoreet sit amet cursus sit. Varius morbi enim nunc faucibus. Nisl pretium fusce id velit ut tortor pretium. Proin nibh nisl condimentum id venenatis a condimentum. Augue mauris augue neque gravida in fermentum et sollicitudin ac. 
-
-Amet purus gravida quis blandit turpis cursus in. Sodales neque sodales ut etiam sit amet nisl purus in. Arcu non odio euismod lacinia at. Orci a scelerisque purus semper eget duis. Habitant morbi tristique senectus et. A cras semper auctor neque vitae tempus. Id neque aliquam vestibulum morbi. Massa enim nec dui nunc mattis enim. Rutrum tellus pellentesque eu tincidunt tortor. 
-
-## Just before you leave
-
-Consectetur adipiscing elit duis tristique sollicitudin. Tellus molestie nunc non blandit massa enim nec dui.
