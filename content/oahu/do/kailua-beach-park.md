@@ -1,7 +1,7 @@
 ---
 title: Kailua Beach Park
 description: Windy beach park that has plenty of sand, grass, picnic tables, and sometimes shallow pools in the sand for kids.
-categories: ["beach", "water", "park"]
+categories: ["beaches", "water", "park"]
 amenities: ["bathroom", "beach shower", "free parking", "street parking"]
 google_maps: https://goo.gl/maps/NbuvJTyWACzVnDE18
 posted_date: 2021-10-05
