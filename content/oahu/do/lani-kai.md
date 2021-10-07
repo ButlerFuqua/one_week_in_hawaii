@@ -1,7 +1,7 @@
 ---
 title: Lani Kai
 description: A very beautiful and relaxing beach. Sometimes very windy with choppy water, but otherwise good for snorkeling. Little to no waves.
-categories: ["beaches", "water"]
+categories: ["beach", "water"]
 amenities: ["street parking",]
 google_maps: https://goo.gl/maps/ffjYs3WDzLyqPsns7
 posted_date: 2021-10-05

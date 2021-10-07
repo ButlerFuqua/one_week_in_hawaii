@@ -1,7 +1,7 @@
 ---
 title: Kapiolani Beach Park
 description: Large park next to Waikiki with a somewhat calm beach. Free parking.
-categories: ["land", "water", "beach"]
+categories: ["beach", "water", "park"]
 amenities: ["bathroom", "beach shower", "free parking"]
 google_maps: https://goo.gl/maps/RpT1xMH4QHCQVbgs7
 posted_date: 2021-10-06
@@ -41,7 +41,6 @@ It's not uncommon to see fitness or yoga groups in the morning.
 ### Beach area
 
 The beach area is kinda slim in my opinion, but it's very nice. Plus the showers and bathrooms are nearby.
-
 
 ### Water
 
