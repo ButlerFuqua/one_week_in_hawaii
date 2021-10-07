@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="teal lighten-4 pa-3 rounded">
+    <v-card class="teal lighten-4 pa-3 rounded" outlined>
       <p class="title">Enjoying the site?</p>
       <p>
         Please consider

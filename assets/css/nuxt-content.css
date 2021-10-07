@@ -29,6 +29,7 @@
     background-color: antiquewhite;
     border-left: 3px solid rgb(139, 177, 179);
     font-style: italic;
+    margin-bottom: 1rem;
 }
 
 .nuxt-content img {

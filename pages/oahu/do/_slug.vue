@@ -8,7 +8,7 @@
       <p v-if="item.google_maps">
         <a :href="item.google_maps" target="_blank">Google Maps Link</a>
       </p>
-      <Amenities :post="item" class="mb-3" />
+      <Amenities v-if="item.amenities" :post="item" class="mb-3" />
       <TOC :post="item" class="mb-3" />
       <nuxt-content :document="item" />
       <BuyMeCoffee />
