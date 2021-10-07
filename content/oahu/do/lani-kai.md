@@ -20,17 +20,23 @@ In my opinion, this is one of the most beautiful beaches on Oahu. The sand is so
 
 Behind the beach is a quiet, residential neighborhood with just enough mountains for some great scenery.
 
-![alt text](/posts/lani_kai_beach_mountain.webp)
+<div class="d-flex justify-center">
+    <img src="/posts/lani_kai_beach_mountain.png" alt="Mountain view from Lani Kai" />
+</div>
 
 In the water are twin mountains called "The Mokes."
 
-![alt text](/posts/lani_kai_mokes.webp)
+<div class="d-flex justify-center">
+    <img src="/posts/lani_kai_mokes.png" alt="Mokes at Lani Kai" />
+</div>
 
 ### Sand
 
 The sand is among the softest that I've seen on the island.
 
-![alt text](/posts/lani_kai_sand.webp)
+<div class="d-flex justify-center">
+    <img src="/posts/lani_kai_sand.png" alt="Sand at Lani Kai" />
+</div>
 
 ## What to do in Lani Kai
 
@@ -54,7 +60,9 @@ Parking isn't *too* bad here. The only parking is in the residential neighborhoo
 
 My wife and I usually find a spot relatively easily, but there have been some limitations recently.
 
-![alt text](/posts/lani_kai_no_parking_sign.webp)
+<div class="d-flex justify-center">
+    <img src="/posts/lani_kai_no_parking_sign.png" alt="No parking sign at Lani Kai" />
+</div>
 
 **At the time of writing this** parking has been restricted to locals residents M-F during certain hours. But, as you can see in the photo, this is only through December 11, 2021. However, this may continue longer due to Emergency vehicles not being able to get through the crowded streets.
 

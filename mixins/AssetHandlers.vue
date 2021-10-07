@@ -6,11 +6,11 @@ export default {
 
       if (post)
         try {
-          image = require(`~/assets/images/featured/${post.slug}.webp`);
+          image = require(`~/assets/images/featured/${post.slug}.png`);
         } catch (error) {
-          image = require(`~/assets/images/no_image_yet.webp`);
+          image = require(`~/assets/images/no_image_yet.png`);
         }
-      else image = require(`~/assets/images/no_image_yet.webp`);
+      else image = require(`~/assets/images/no_image_yet.png`);
 
       return image;
     },

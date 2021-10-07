@@ -27,7 +27,14 @@ export default {
   props: ["post"],
   data() {
     return {
-      amenities: ["bathroom", "beach shower", "free parking", "street parking"],
+      amenities: [
+        "bathroom",
+        "beach shower",
+        "free parking",
+        "street parking",
+        "paid parking",
+        "shops",
+      ],
     };
   },
 };

@@ -9,7 +9,7 @@ updated_date: 2021-10-04
 
 ## Lorem ipsum dolor sit amet, 
 
-![alt text](/no_image_yet.webp)
+![alt text](/no_image_yet.png)
 
 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At erat pellentesque adipiscing commodo elit at imperdiet dui. Neque laoreet suspendisse interdum 
 
@@ -29,7 +29,7 @@ Donec massa sapien faucibus et molestie ac feugiat sed. Amet commodo nulla facil
 
  Ut diam quam nulla porttitor massa id. Lobortis feugiat vivamus at augue eget. Consectetur a erat nam at lectus urna. Senectus et netus et malesuada fames ac turpis.
 
-![alt text](/no_image_yet.webp)
+![alt text](/no_image_yet.png)
 
 Eget gravida cum sociis natoque penatibus et magnis. 
 
@@ -44,7 +44,7 @@ Libero id faucibus nisl tincidunt eget. **Donec** enim diam vulputate ut pharetr
 
 Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Dolor sed viverra ipsum nunc aliquet bibendum enim. Tincidunt arcu non sodales neque. Convallis tellus id interdum velit laoreet id. 
 
-![alt text](/no_image_yet.webp)
+![alt text](/no_image_yet.png)
 
 Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Eros donec ac odio tempor. Morbi quis commodo odio aenean sed adipiscing. 
 
@@ -52,7 +52,7 @@ Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Vel pharetra v
 
 ### One
 
-![alt text](/no_image_yet.webp)
+![alt text](/no_image_yet.png)
 
 Ac auctor augue mauris augue neque gravida in. Risus commodo viverra maecenas accumsan. Ullamcorper morbi tincidunt ornare massa. Cras pulvinar mattis nunc sed blandit libero volutpat. Molestie at elementum eu facilisis sed odio. 
 

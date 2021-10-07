@@ -23,3 +23,14 @@
 .nuxt-content a:active {    /* active link */
     color: #FF5722;
 }
+
+.nuxt-content blockquote{
+    padding: 1rem;
+    background-color: antiquewhite;
+    border-left: 3px solid rgb(139, 177, 179);
+    font-style: italic;
+}
+
+.nuxt-content img {
+    margin-bottom: 1rem;
+}
