@@ -1,10 +1,8 @@
 ---
 title: Contact
-description: A website to help you with your Hawai'i Vacation.
+description: How to contact the owner of this site.
 post_number: 20
 ---
-
-# Contact
 
 ## How?
 

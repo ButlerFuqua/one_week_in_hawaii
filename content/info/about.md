@@ -11,7 +11,9 @@ visiting Hawai'i.
 
 ### How?
 
-You can search things to do and add any activity, food item, or site to a personal list. Download the list as a PDF.
+You can search things to do and add any activity to a personal list.
+
+Download the list as a PDF.
 
 Best part? - **It's completely free!**
 
@@ -24,4 +26,6 @@ With your help I can continue to offer this website free of ads.
 ## Ready?
 
 [Search Oahu](/pages/oahu/)
+
+> Check back later to search on other islands
 

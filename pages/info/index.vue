@@ -2,7 +2,7 @@
   <v-container>
     <div v-if="isLoading">
       <v-card
-        v-for="num in 3"
+        v-for="num in 4"
         :key="num"
         loading
         outlined

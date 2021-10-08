@@ -12,3 +12,8 @@
 * blowhole-lookout
 * snorkeling
 * snorkeling-with-sea-life
+
+## Blog
+
+* where-to-park-in-waikiki
+* which-hawaiian-island-is-which

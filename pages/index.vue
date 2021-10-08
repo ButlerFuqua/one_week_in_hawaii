@@ -23,11 +23,7 @@
     ></v-container>
     <v-container id="pickIsland" class="d-flex flex-column align-center">
       <h3 class="title">What <strong>island</strong> are you interested in?</h3>
-      <v-btn
-        text
-        rounded
-        color="primary"
-        @click="$router.push('/blog/which-hawaiian-island-is-which')"
+      <v-btn text rounded color="primary" @click="$router.push('/islands')"
         >Which is which?</v-btn
       >
       <div v-if="!islands">

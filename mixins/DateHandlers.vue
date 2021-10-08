@@ -37,7 +37,7 @@ export default {
 
       const month = this.monthsShort[date.getMonth() - 1];
       const year = date.getFullYear();
-      const day = date.getDate();
+      const day = date.getDate() + 1;
 
       return `${month} ${day}, ${year}`;
     },
@@ -46,7 +46,7 @@ export default {
 
       const month = this.monthsShort[date.getMonth() - 1];
       const year = date.getFullYear();
-      const day = date.getDate();
+      const day = date.getDate() + 1;
 
       return `${month} ${day}, ${year}`;
     },
