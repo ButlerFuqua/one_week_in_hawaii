@@ -1,5 +1,5 @@
 <template>
-  <v-list flat dense>
+  <v-list flat dense class="mb-3">
     <v-subheader>Table of contents</v-subheader>
     <v-list-item-group color="blue">
       <v-list-item v-for="(link, i) in post.toc" :key="i">
