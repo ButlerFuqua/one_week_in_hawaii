@@ -1,6 +1,6 @@
 ---
 title: Kauai
-description: A gorgeous island with strong currents that has a very local feel.
+description: A gorgeous island with strong currents and a "local" vibe.
 hasContent: false
 home: /kauai
 post_number: 4
@@ -22,7 +22,7 @@ The hiking is fun, but you want to make sure you're in good shape.
 
 The current around Kauai is incredibly strong, and may be very dangerous.
 
-There are some safe areas to get into the water, but I wouldn't recommend going here if you planned on a lot of water sports.
+There are some safe areas to get in the water, but I wouldn't recommend going here if you planned on doing a lot of water sports.
 
 ## Want to know more?
 

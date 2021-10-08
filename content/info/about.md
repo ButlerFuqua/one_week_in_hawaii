@@ -6,16 +6,13 @@ post_number: 10
 
 ## One Week In Hawai'i
 
-This site is designed to help island visitors plan their activities while
-visiting Hawai'i.
+This site is designed to help plan your vacation to Hawai'i.
 
-### How?
+### How? 1, 2, FREE!
 
-You can search things to do and add any activity to a personal list.
-
-Download the list as a PDF.
-
-Best part? - **It's completely free!**
+1) Add "todo" items to your list.
+2) Download the list as a PDF.
+3) That's it! - **It's completely free!**
 
 ## Want to support this site?
 

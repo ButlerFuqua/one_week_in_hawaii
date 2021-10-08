@@ -1,6 +1,6 @@
 ---
 title: Island of Hawaii ( Big Island )
-description: The largest of the Hawaiian islands. Many quiet, rural areas. Great volcano park.
+description: The largest Hawaiian island. Many quiet, rural areas. Great volcano park.
 hasContent: false
 home: /big
 post_number: 2
@@ -8,15 +8,14 @@ posted_date: 2021-10-07
 updated_date: 2021-10-07
 ---
 
-This island confused me at first because its name is Hawai'i, and the state is also named Hawai'i. 
+This island confused me at first because its name is "Hawai'i," and the state is also named Hawai'i. 
 
-Remember that it's nickname is **"The Big Island,"** and that's what most locals refer to it as.
+It's nickname is **"The Big Island,"** and that's what most locals refer to it as.
 
-Just know if you're searching excursions online and they claim to be on the "Island of Hawai'i," or in "Hawai'i" that it may be talking about the state ( any of the islands ), or it may be talking about The Big Island.
+Just know that if you're booking an excursion and they claim to be on the "Island of Hawai'i," or in "Hawai'i" that it may be talking about the state ( *any of the islands* ), or it may be talking about **The Big Island**.
 
 The best way to check if your on the right island is search your destination on Maps and see which island it's on.
 
-> All activities on this site are categorized by islands to help avoid confusion.
 
 ## What it's like
 
