@@ -96,9 +96,17 @@
 </template>
 
 <script>
+import generateHeadTags from "../lib/generateMeta";
 import ContentHandlers from "../../mixins/ContentHandlers";
 import AssetHandlers from "../../mixins/AssetHandlers";
 export default {
+  head: generateHeadTags(
+    "Oahu",
+    "Search for what to do in Oahu Hawaii.",
+    "oahu",
+    "oahu",
+    true
+  ),
   layout: "oahu",
   components: {},
   mixins: [ContentHandlers, AssetHandlers],
