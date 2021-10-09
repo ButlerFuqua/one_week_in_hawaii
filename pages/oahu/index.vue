@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import generateHeadTags from "../lib/generateMeta";
+import generateHeadTags from "../../lib/generateMeta";
 import ContentHandlers from "../../mixins/ContentHandlers";
 import AssetHandlers from "../../mixins/AssetHandlers";
 export default {
