@@ -30,7 +30,7 @@ Local storage is stored in your local browser instance and it not stored on any 
 
 ## Content
 
-Unless otherwise stated, all of the content on this site belongs to the owner of the site. Some of the images may be in the public domain.
+Unless otherwise stated, all of the content on this site belongs to the owner of the site. Some of the images may be in the public domain or a screenshot of a popular app, such as Google Maps.
 
 It is safe to assume that you have no right to any of the content on this website.
 

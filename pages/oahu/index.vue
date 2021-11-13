@@ -104,8 +104,7 @@ export default {
     "Oahu",
     "Search for what to do in Oahu Hawaii.",
     "oahu",
-    "oahu",
-    true
+    "oahu"
   ),
   layout: "oahu",
   components: {},
