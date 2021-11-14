@@ -199,7 +199,7 @@ export default {
       let getPlacesResponse;
       try {
         getPlacesResponse = await axios.get(
-          `/api/example?category=${this.selectedCategories.join(",")}`
+          `/api/list-places?category=${this.selectedCategories.join(",")}`
         );
       } catch (error) {
         getPlacesResponse = {
