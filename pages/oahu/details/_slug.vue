@@ -1,16 +1,9 @@
 <template>
-  <div v-if="item">
-    <h1 class="text-center">{{ item.title }}</h1>
+  <div v-if="place">
+    <h1 class="text-center">{{ place.name }}</h1>
     <v-divider class="mb-3"></v-divider>
-    <v-img class="mb-2" :src="getFeaturedImage(item)"></v-img>
+    <!-- <v-img class="mb-2" :src="getFeaturedImage(place_id)"></v-img> -->
     <v-container>
-      <TLDR :post="item" />
-      <p v-if="item.google_maps">
-        <a :href="item.google_maps" target="_blank">Google Maps Link</a>
-      </p>
-      <Amenities v-if="item.amenities" :post="item" class="mb-3" />
-      <TOC :post="item" class="mb-3" />
-      <nuxt-content :document="item" />
       <BuyMeCoffee />
     </v-container>
   </div>
@@ -20,31 +13,38 @@
 </template>
 
 <script>
-import ContentHandlers from "../../../mixins/ContentHandlers";
-import AssetHandlers from "../../../mixins/AssetHandlers";
 import SkeletonContent from "../../../components/progress/SkeletonContent";
-import TLDR from "../../../components/content/TLDR";
 import TOC from "../../../components/content/TOC";
-import Amenities from "../../../components/content/Amenities";
+import axios from "axios";
 import BuyMeCoffee from "../../../components/BuyMeCoffee";
 export default {
   layout: "oahuView",
-  props: ["pathToContent"],
   data() {
     return {
-      item: null,
+      place: null,
     };
   },
-  components: { SkeletonContent, TLDR, TOC, BuyMeCoffee },
-  mixins: [ContentHandlers, AssetHandlers, Amenities],
+  components: { SkeletonContent, TOC, BuyMeCoffee },
   methods: {
+    async getPlace() {
+      let response;
+      try {
+        response = await axios.get(
+          `/api/place-details?id=${this.$route.params.slug}`
+        );
+      } catch (error) {
+        console.log("error", error);
+        throw error;
+      }
+      return response.data.result;
+    },
     async init() {
-      this.item = await this.returnContentFromParams();
+      this.place = await this.getPlace();
     },
   },
   async created() {
     await this.init();
-    this.$nuxt.$emit("pageTitleChange", this.item.title);
+    this.$nuxt.$emit("pageTitleChange", this.place.name);
   },
 };
 </script>

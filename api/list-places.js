@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     const { query: { category } } = req
     console.log('category', category)
 
-    let getPlacesResponse;
+    let getPlacesResponse
     try {
         getPlacesResponse = await axios.get(
             `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=21.438916,-157.999933&radius=78012${category ? `&keyword=${category}` : ``}&key=${GOOGLE_MAPS_API_KEY}`
@@ -23,6 +23,8 @@ export default async function handler(req, res) {
 
     if (getPlacesResponse.error)
         return res.status(200).json({ success: false, message: getPlacesResponse.error })
+
+
 
     const { results } = getPlacesResponse.data
 

@@ -55,6 +55,7 @@ import ReloadIcon from "../components/icons/ReloadIcon";
 import ContentHandlers from "../mixins/ContentHandlers";
 import TermsConsent from "../components/TermsConsent";
 import ShareButton from "../components/ShareButton";
+import axios from "axios";
 export default {
   components: {
     TermsConsent,
@@ -82,12 +83,25 @@ export default {
     },
   },
   methods: {
+    async getPlace() {
+      let response;
+      try {
+        response = await axios.get(
+          `/api/place-details?id=${this.$route.params.slug}`
+        );
+      } catch (error) {
+        console.log("error", error);
+        throw error;
+      }
+      console.log("response", response);
+      return response.data.result;
+    },
     async init() {
       const { query } = this.$route;
+      console.log("query", query);
       this.title = query.title;
       this.dir = query.dir;
-      this.slug = query.slug;
-      this.post = await this.returnContentFromParams();
+      this.post = await this.getPlace();
     },
   },
   async created() {

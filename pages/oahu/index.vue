@@ -1,12 +1,13 @@
 <template>
   <v-container>
-    <div v-if="!isLoading" id="categoryContainer">
+    <div id="categoryContainer">
       <v-btn
         v-for="category in categories"
         :key="category"
         class="mr-2"
         small
         rounded
+        :disabled="isLoading"
         :outlined="!selectedCategories.includes(category)"
         :color="
           !selectedCategories.includes(category) ? 'default' : 'secondary'
@@ -16,33 +17,15 @@
         >{{ category }}</v-btn
       >
     </div>
-    <div v-else id="categoryContainer">
-      <v-btn
-        disabled
-        class="mr-2"
-        small
-        rounded
-        outlined
-        color="default"
-        elevation="0"
-        >Laoding categories...</v-btn
-      >
-    </div>
     <v-text-field
-      v-if="!isLoading"
       dense
+      :disabled="isLoading"
       class="mt-2"
       outlined
       placeholder="Search..."
       v-model="searchCriteria"
-    ></v-text-field>
-    <v-text-field
-      v-else
-      dense
-      class="mt-2"
-      outlined
-      placeholder="Laoding search..."
-      disabled
+      append-outer-icon="mdi-magnify"
+      @click:append-outer="submitSearch"
     ></v-text-field>
     <div v-if="isLoading">
       <v-card
@@ -171,13 +154,8 @@ export default {
     },
   },
   methods: {
-    navigateToPage(post) {
-      const { categories } = post;
-
-      const isPlan = categories.includes("plans");
-
-      if (isPlan) this.$router.push(`/oahu/plans/${post.slug}`);
-      else this.$router.push(`/oahu/do/${post.slug}`);
+    navigateToPage(place) {
+      this.$router.push(`/oahu/details/${place.place_id}`);
     },
     async updateSelectedCategories(selectedCategory) {
       this.isLoading = true;
@@ -192,10 +170,47 @@ export default {
         );
       else this.selectedCategories.push(selectedCategory);
 
-      await this.getPlaces();
+      await this.getPlacesCategory();
       this.isLoading = false;
     },
-    async getPlaces() {
+    async submitSearch() {
+      if (this.searchCriteria.trim().length < 3)
+        return this.getPlacesCategory();
+
+      this.isLoading = true;
+
+      this.selectedCategories = [];
+
+      await this.getPlacesSearch();
+
+      this.isLoading = false;
+    },
+    async getPlacesSearch() {
+      let getPlacesResponse;
+      try {
+        getPlacesResponse = await axios.get(
+          `/api/list-places?category=${this.searchCriteria}`
+        );
+      } catch (error) {
+        getPlacesResponse = {
+          data: (error = error.message || JSON.stringify(error)),
+        };
+      }
+
+      if (getPlacesResponse.error) {
+        console.error(getPlacesResponse.error);
+        this.places = [];
+      }
+      this.places = getPlacesResponse.data.results;
+
+      console.log("getPlacesResponse", getPlacesResponse);
+
+      console.log("places", this.places);
+    },
+    async getPlacesCategory() {
+      if (this.selectedCategories.length == 0)
+        this.selectedCategories = ["beach"];
+
       let getPlacesResponse;
       try {
         getPlacesResponse = await axios.get(
@@ -219,7 +234,7 @@ export default {
     },
     async init() {
       this.isLoading = true;
-      await this.getPlaces();
+      await this.getPlacesCategory();
       this.isLoading = false;
     },
   },
