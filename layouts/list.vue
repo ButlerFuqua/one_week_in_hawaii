@@ -106,17 +106,7 @@ export default {
 
       const doc = new jsPDF();
 
-      // Fetch items from conent
-      // User passed in array if present, otherwise use list in state
-      let items;
-      if (sourceArray)
-        items = await Promise.all(
-          sourceArray.map(async (item) => this.returnContentFromObj(item))
-        );
-      else
-        items = await Promise.all(
-          this.todos.map(async (item) => this.returnContentFromObj(item))
-        );
+      const items = [...this.todos];
 
       if (items.length < 1) return alert("You have no items in your list.");
 
@@ -140,23 +130,19 @@ export default {
 
         // Write item to PDF
         doc.setFontSize(14);
-        doc.text(item.title, 10, startingPoint);
+        doc.text(item.name, 10, startingPoint);
         doc.setFontSize(12);
-        let splitDescription = doc.splitTextToSize(item.description, 180);
-        doc.text(splitDescription, 10, startingPoint + 10);
-        startingPoint = this.returnNewStartingPointFromDescription(
-          startingPoint,
-          splitDescription
-        );
+        doc.text(`Rating: ${item.rating.toString()}`, 10, startingPoint + 10);
+
         doc.setTextColor(0, 150, 136);
-        doc.text(item.categories.join(", "), 10, startingPoint + 20);
+        doc.text(item.name, 10, startingPoint + 20);
         doc.setTextColor(0, 0, 0);
         doc.setTextColor(62, 80, 177);
-        doc.textWithLink("Visit Page", 10, startingPoint + 30, {
-          url: `${rootDomain}/oahu/${
-            item.dir.includes("plans") ? "plans" : "do"
-          }/${item.slug}`,
-        });
+        // doc.textWithLink("Visit Page", 10, startingPoint + 30, {
+        //   url: `${rootDomain}/oahu/${
+        //     item.dir.includes("plans") ? "plans" : "do"
+        //   }/${item.slug}`,
+        // });
         doc.setTextColor(0, 0, 0);
         doc.text("________________", 10, startingPoint + 40); // End line
 
