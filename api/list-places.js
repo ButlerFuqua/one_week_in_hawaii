@@ -22,9 +22,7 @@ export default async function handler(req, res) {
     }
 
     if (getPlacesResponse.error)
-        return res.status(200).json({ success: false, message: getPlacesResponse.error })
-
-
+        return res.status(500).json({ success: false, message: getPlacesResponse.error })
 
     const { results } = getPlacesResponse.data
 

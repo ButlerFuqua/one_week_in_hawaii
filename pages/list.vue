@@ -8,16 +8,21 @@
       <v-divider class="my-2"></v-divider>
 
       <v-list>
-        <template v-for="(post, idx) in todos">
-          <v-list-item two-line :key="post.title">
+        <template v-for="(place, idx) in todos">
+          <v-list-item two-line :key="place.name">
             <v-list-item-content>
-              <v-list-item-title>{{ post.title }}</v-list-item-title>
+              <v-list-item-title>{{ place.name }}</v-list-item-title>
               <v-list-item-subtitle>
-                {{ post.description }}
+                Rating: {{ place.rating }}
               </v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-              <v-btn small text rounded color="red" @click="removeHandler(post)"
+              <v-btn
+                small
+                text
+                rounded
+                color="red"
+                @click="removeHandler(place)"
                 >Remove</v-btn
               >
             </v-list-item-action>
@@ -27,7 +32,7 @@
                 text
                 rounded
                 color="blue"
-                @click="navigateToPage(post)"
+                @click="navigateToPage(place)"
                 >View</v-btn
               >
             </v-list-item-action>
@@ -46,7 +51,7 @@ import AssetHandlers from "../mixins/AssetHandlers";
 export default {
   head: generateHeadTags(
     "Your Vacation List",
-    "A list of activites you've saved for your trip.",
+    "A list of activities you've saved for your trip.",
     "welcome",
     null,
     true
@@ -66,39 +71,26 @@ export default {
         "Lanai",
         "Kahoolawe",
       ],
-      todos: [],
     };
   },
-  computed: {},
+  computed: {
+    todos() {
+      return this.$store.state.todos.list;
+    },
+  },
   methods: {
-    navigateToPage(post) {
-      const { categories } = post;
-
-      const isPlan = categories.includes("plans");
-
-      if (isPlan) this.$router.push(`/oahu/plans/${post.slug}`);
-      else this.$router.push(`/oahu/do/${post.slug}`);
+    navigateToPage(place) {
+      this.$router.push(`/oahu/details/${place.place_id}`);
     },
     async removeHandler(item) {
       this.$store.commit(`todos/remove`, item);
-      await this.populatTodos();
-    },
-    async populatTodos() {
-      const itemsInStorage = this.$store.state.todos.list;
-      const items = await Promise.all(
-        itemsInStorage.map(
-          async (item) => await this.returnContentFromObj(item)
-        )
-      );
-      this.todos = items;
-    },
-    async init() {
-      await this.populatTodos();
     },
   },
   async created() {
     this.$nuxt.$emit("pageTitleChange", this.pageTitle);
-    if (process.client) await this.init();
+    // if (process.client) await this.init();
+
+    if (this.todos) console.log("todos", this.todos);
   },
   beforeDestroy() {},
 };

@@ -4,13 +4,10 @@ export const state = () => ({
 
 export const mutations = {
     add(state, item) {
-        state.list.push({
-            dir: item.dir,
-            slug: item.slug,
-        })
+        state.list.push(item)
     },
     remove(state, item) {
-        state.list = state.list.filter(listItem => listItem.slug !== item.slug)
+        state.list = state.list.filter(listItem => listItem.place_id !== item.place_id)
     },
     clearList(state) {
         state.list = []

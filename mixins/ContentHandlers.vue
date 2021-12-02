@@ -24,6 +24,7 @@ export default {
       return fetchedContent;
     },
     async returnContentFromObj(obj) {
+      console.log("obj", obj);
       let { dir, slug } = obj;
       if (dir[0] === "/") dir = dir.replace("/", "");
       let fetchedContent;

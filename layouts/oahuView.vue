@@ -1,5 +1,5 @@
 <template>
-  <v-app v-if="post" dark>
+  <v-app v-if="place" dark>
     <v-app-bar fixed app flat class="grey lighten-3">
       <v-btn
         icon
@@ -8,7 +8,7 @@
       >
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="post.title" />
+      <v-toolbar-title v-text="place.title" />
       <v-spacer />
     </v-app-bar>
     <v-main class="grey lighten-5">
@@ -24,16 +24,20 @@
       </v-btn>
 
       <v-btn
-        v-if="!postInList"
+        v-if="!placeInList"
         text
         value="add"
-        @click="$store.commit(`todos/add`, post)"
+        @click="$store.commit(`todos/add`, place)"
       >
         <span>To List</span>
 
         <v-icon>mdi-plus</v-icon>
       </v-btn>
-      <v-btn v-else value="remove" @click="$store.commit(`todos/remove`, post)">
+      <v-btn
+        v-else
+        value="remove"
+        @click="$store.commit(`todos/remove`, place)"
+      >
         <span>From List</span>
 
         <v-icon>mdi-minus</v-icon>
@@ -69,14 +73,14 @@ export default {
       title: "",
       dir: "",
       slug: "",
-      post: null,
+      place: null,
       value: "recent",
     };
   },
   computed: {
-    postInList() {
-      const posts = this.$store.state.todos.list;
-      return posts.find((post) => post.slug === this.post.slug);
+    placeInList() {
+      const place = this.$store.state.todos.list;
+      return place.find((place) => place.place_id === this.place.place_id);
     },
     todos() {
       return this.$store.state.todos.list;
@@ -101,7 +105,7 @@ export default {
       console.log("query", query);
       this.title = query.title;
       this.dir = query.dir;
-      this.post = await this.getPlace();
+      this.place = await this.getPlace();
     },
   },
   async created() {
