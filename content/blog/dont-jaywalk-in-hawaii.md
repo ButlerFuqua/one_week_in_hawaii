@@ -18,7 +18,6 @@ Especially in Waikiki.
 
 Yes, you'll see lots of people jaywalking in Honolulu, but I still don't advise it.
 
-Think of jaywalking in Oahu like speeding in a speed trap. You might get away with it most places, or if no one sees you, but you don't do it in an area you know cops are watching closely. 
-
+Think of jaywalking in Oahu like speeding in a speed trap. You might get away with it in most places, but you don't do it in an area where you know cops are waiting to ticket you. 
 
 You don't want to be the one that gets hurt or gets caught.

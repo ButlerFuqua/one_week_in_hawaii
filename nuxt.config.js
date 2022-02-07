@@ -59,7 +59,7 @@ export default {
     },
   },
   build: {
-    // extractCSS: true, // tbd on this one
+    extractCSS: true, // tbd on this one
     extractCSS: {
       ignoreOrder: true
     },
