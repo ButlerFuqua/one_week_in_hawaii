@@ -37,8 +37,8 @@ export default {
     },
     async returnAllPosts() {
       let query = this.$content("oahu", { deep: true }).sortBy(
-        "post_number",
-        "desc"
+        "updated_at",
+        "asc"
       );
       const fetchedPosts = await query.fetch();
       return fetchedPosts;

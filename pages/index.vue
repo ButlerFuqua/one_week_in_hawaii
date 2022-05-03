@@ -7,31 +7,23 @@
           <h2 class="headline">
             How to get the most out of your vacation in Hawai'i.
           </h2>
-          <!-- <v-btn
+          <v-btn
             rounded
             class="mt-2"
             color="secondary lighten-1"
             @click="$router.push('/oahu')"
             >Search Oahu</v-btn
-          > -->
-          <v-divider class="my-2" color="white"></v-divider>
-          <h3 class="title">
-            <em> Coming soon... </em>
-          </h3>
+          >
         </v-container>
       </div>
     </div>
-    <!-- <v-container
+    <v-container
       id="islandInfo"
       class="d-flex justify-center align-center"
     ></v-container>
     <v-container id="pickIsland" class="d-flex flex-column align-center">
       <h3 class="title">What <strong>island</strong> are you interested in?</h3>
-      <v-btn
-        text
-        rounded
-        color="primary"
-        @click="$router.push('/blog/which-hawaiian-island-is-which')"
+      <v-btn text rounded color="primary" @click="$router.push('/islands')"
         >Which is which?</v-btn
       >
       <div v-if="!islands">
@@ -52,10 +44,11 @@
           v-for="island in islands"
           :key="island.title"
           cols="12"
-          md="6"
+          sm="6"
           lg="4"
         >
-          <v-card outlined class="mb-3">
+          <v-card outlined class="mb-3 h-100">
+            <v-img :src="getFeaturedImage(island)"></v-img>
             <div class="pa-2">
               <h4 class="title">{{ island.title }}</h4>
               <p>{{ island.description }}</p>
@@ -77,7 +70,7 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container> -->
+    </v-container>
   </div>
 </template>
 
@@ -87,6 +80,7 @@ import StandardCard from "../components/StandardCard";
 import PrimaryBtn from "../components/PrimaryBtn";
 import WaterWaves from "../components/WaterWaves";
 import ContentHandlers from "../mixins/ContentHandlers";
+import AssetHandlers from "../mixins/AssetHandlers";
 export default {
   head: generateHeadTags(
     "One Week in Hawaii",
@@ -97,7 +91,7 @@ export default {
   ),
   layout: "landing",
   components: { StandardCard, PrimaryBtn, WaterWaves },
-  mixins: [ContentHandlers],
+  mixins: [ContentHandlers, AssetHandlers],
   components: { StandardCard, PrimaryBtn },
   data() {
     return {

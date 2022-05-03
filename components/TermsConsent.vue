@@ -48,8 +48,11 @@ export default {
 #consent {
   position: fixed;
   bottom: 0;
-  width: 100vh;
+  width: 100%;
   z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-enter-active,

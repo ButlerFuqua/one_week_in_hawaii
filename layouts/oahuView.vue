@@ -17,10 +17,10 @@
       </v-container>
     </v-main>
     <v-bottom-navigation fixed app flat>
-      <v-btn @click="$router.push('/oahu')" value="recent">
-        <span>Back</span>
+      <v-btn @click="$router.push('/oahu')" value="oahu">
+        <span>Oahu</span>
 
-        <v-icon>mdi-arrow-left</v-icon>
+        <v-icon>mdi-island</v-icon>
       </v-btn>
 
       <v-btn
@@ -38,6 +38,12 @@
 
         <v-icon>mdi-minus</v-icon>
       </v-btn>
+      <ShareButton />
+      <v-btn @click="$router.push('/list')" value="list">
+        <span>List ({{ todos.length }})</span>
+
+        <v-icon>mdi-format-list-text</v-icon>
+      </v-btn>
     </v-bottom-navigation>
     <TermsConsent />
   </v-app>
@@ -48,9 +54,11 @@ import MenuIcon from "../components/icons/MenuIcon.vue";
 import ReloadIcon from "../components/icons/ReloadIcon";
 import ContentHandlers from "../mixins/ContentHandlers";
 import TermsConsent from "../components/TermsConsent";
+import ShareButton from "../components/ShareButton";
 export default {
   components: {
     TermsConsent,
+    ShareButton,
     ReloadIcon,
     MenuIcon,
   },
@@ -68,6 +76,9 @@ export default {
     postInList() {
       const posts = this.$store.state.todos.list;
       return posts.find((post) => post.slug === this.post.slug);
+    },
+    todos() {
+      return this.$store.state.todos.list;
     },
   },
   methods: {

@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import MenuIcon from '~/components/icons/MenuIcon'
+import TLDR from '~/components/content/TLDR'
 
 
-const components = { MenuIcon }
+const components = { TLDR }
 
 Object.entries(components).forEach(([name, component]) => {
   Vue.component(name, component)

@@ -14,9 +14,23 @@
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
-    <v-main class="grey lighten-5">
+    <v-main v-if="!showSupport" class="grey lighten-5">
       <v-container style="margin: auto">
         <nuxt />
+      </v-container>
+    </v-main>
+    <v-main v-else class="grey lighten-5">
+      <v-container class="d-flex justify-center align-center h-100">
+        <div>
+          <div class="text-center">
+            <h1 class="title mb-5">You're download has started.</h1>
+            <h2 class="headline mb-5">Hope you enjoy your vacation!</h2>
+          </div>
+          <BuyMeCoffee :big="true" />
+          <v-btn rounded text small color="primary" @click="showSupport = false"
+            >No thanks</v-btn
+          >
+        </div>
       </v-container>
     </v-main>
     <v-bottom-navigation fixed app flat>
@@ -47,11 +61,13 @@ import MenuIcon from "../components/icons/MenuIcon.vue";
 import ReloadIcon from "../components/icons/ReloadIcon";
 import ContentHandlers from "../mixins/ContentHandlers";
 import TermsConsent from "../components/TermsConsent";
+import BuyMeCoffee from "../components/BuyMeCoffee";
 import { jsPDF } from "jspdf";
 export default {
   components: {
     MainNav,
     TermsConsent,
+    BuyMeCoffee,
     ReloadIcon,
     MenuIcon,
   },
@@ -63,12 +79,21 @@ export default {
   },
   data() {
     return {
+      showSupport: false,
       drawer: false,
       title: "Your vacation List",
       value: "download",
     };
   },
   methods: {
+    returnNewStartingPointFromDescription(startingPoint, descArray) {
+      const length = descArray.length - 1;
+
+      if (length === 0) return startingPoint;
+
+      return (startingPoint += length * 5);
+    },
+    returnCategoriesAsText(item) {},
     async downloadHandler(setLoader, sourceArray) {
       // Show loading state, if applicable
       if (setLoader) setLoader(true);
@@ -99,7 +124,7 @@ export default {
       // Set page consts and items to track
       let currentPage = 1;
       let startingPoint = 20;
-      const itemLength = 50;
+      const itemLength = 60;
       doc.setPage(currentPage);
 
       items.forEach((item, idx) => {
@@ -117,15 +142,23 @@ export default {
         doc.setFontSize(14);
         doc.text(item.title, 10, startingPoint);
         doc.setFontSize(12);
-        doc.text(item.description, 10, startingPoint + 10);
-        doc.setTextColor(255, 30, 200);
-        doc.textWithLink("Visit Page", 10, startingPoint + 20, {
+        let splitDescription = doc.splitTextToSize(item.description, 180);
+        doc.text(splitDescription, 10, startingPoint + 10);
+        startingPoint = this.returnNewStartingPointFromDescription(
+          startingPoint,
+          splitDescription
+        );
+        doc.setTextColor(0, 150, 136);
+        doc.text(item.categories.join(", "), 10, startingPoint + 20);
+        doc.setTextColor(0, 0, 0);
+        doc.setTextColor(62, 80, 177);
+        doc.textWithLink("Visit Page", 10, startingPoint + 30, {
           url: `${rootDomain}/oahu/${
             item.dir.includes("plans") ? "plans" : "do"
           }/${item.slug}`,
         });
         doc.setTextColor(0, 0, 0);
-        doc.text("________________", 10, startingPoint + 30); // End line
+        doc.text("________________", 10, startingPoint + 40); // End line
 
         // Update starting point
         startingPoint += itemLength;
@@ -136,6 +169,9 @@ export default {
 
       // Remove loading state if applicable
       if (setLoader) setLoader(false);
+
+      // Show support page
+      this.showSupport = true;
     },
   },
 };

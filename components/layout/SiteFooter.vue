@@ -108,6 +108,10 @@ export default {
           path: "/info",
         },
         {
+          text: "Contact",
+          path: "/info/contact",
+        },
+        {
           text: "Disclaimer",
           path: "/info/disclaimer",
         },
